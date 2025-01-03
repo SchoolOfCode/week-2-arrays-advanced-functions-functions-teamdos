@@ -27,3 +27,42 @@ function callGreeting(name, nameTwo, nameThree) {
 //   - Three names
 // - Check the result, is it what you expected?
 console.log(callGreeting('Dani', 'Nath', 'Rowan'));
+
+
+
+let productsArray = [
+    {
+      product: 'Shoes',
+      price: 25
+    },
+    {
+      product: 'Hat',
+      price: 5
+    },
+    {
+        product: 'Shirt',
+        price: 20
+    },
+    {
+        product: 'Trousers',
+        price: 24
+    },
+    {
+        product: 'Coat',
+        price: 50
+    },
+    {
+        product: 'Jumper',
+        price: 30
+    }
+  ]
+
+  const addVAT = productsArray.map((product) => ({
+    product: product.product, 
+    price: product.price * 0.8
+}));
+
+    console.log(productsArray);
+    console.log(addVAT);
+
+   

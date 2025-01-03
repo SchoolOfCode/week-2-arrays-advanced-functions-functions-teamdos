@@ -106,3 +106,42 @@ const reduced = reduceArray.filter((number) => number < 5).map(reduceArray => re
 console.log(`The old array is ${reduceArray}`);
 console.log(`The new array is ${reduced}`);
 
+const addressBook = []
+
+const addContact = (name, number) => {
+    addressBook.push({name, number});
+    return "Contact added!";
+}
+
+console.log(addContact('Dani', 123456789));
+console.log(addContact('Nath', 987654321));
+console.log(addContact('Rowan', 123123123));
+console.log(addressBook);
+
+const showContacts = () => {
+    return addressBook;
+}
+
+console.log(showContacts());
+
+const updateContact = (name, number) => {
+    const contact = addressBook.find(contact => contact.name === name);
+    contact.number = number;
+    return "Contact updated!";
+}
+
+console.log(updateContact('Dani', 111111111));
+
+const deleteContact = (name) => {
+    const index = addressBook.findIndex(contact => contact.name === name);
+    addressBook.splice(index, 1);
+    return "Contact deleted!";
+}
+
+console.log(deleteContact('Dani'));
+
+const findContact = (name) => {
+    const contact = addressBook.find(contact => contact.name === name);
+    return contact;
+}
+console.log(findContact('Nath'));
